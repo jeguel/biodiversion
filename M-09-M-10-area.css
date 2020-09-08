@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    background: rgb(37, 37, 37);
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0);;
+}
+.cabecera{
+    max-width: 1270px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    
+}
+
+.btn-volver img{
+    display: flex;
+    width: 40px;
+    height: auto;
+    margin: 0px 10px 0px 10px;
+    padding: 5px;
+}
+.btn-volver:hover{
+    transform: scale(.90);
+    cursor: pointer;
+}
+
+
+h1{
+    width: 100%;
+    padding: 10px 20px;
+    color: rgb(255, 163, 51)
+}
+
+
+
+main{
+    width: 100%;
+    max-width: 1270px;
+    margin: auto;
+    padding-top: 50px;
+}
+.img-sanjose{
+    width: 100%;
+    margin: auto;
+}
+
+.img-aquicuana{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+
+.img-pisatahua{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+
+
+h2{
+    padding: 10px 20px;
+    color: rgb(255, 163, 51)
+}
+.texto-1{
+    padding: 5px 20px;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(192, 192, 192);
+    text-align: justify;
+}
+
+.enlaces{
+    padding: 5px 20px;
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+    background: rgb(255, 163, 51);
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    width: 40%;
+}
+
+.enlaces:hover{
+    background: rgb(250, 180, 95);
+    transform: scale(.98);
+}
+
+/* estilos de tumichucua */
+
+.foto-tumi-2{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+
+.foto-tumi-3{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+
+@media all and (max-width: 1000px){
+
+    main{
+        width: 100%;
+        max-width: 1270px;
+        margin: auto;
+        padding-top: 100px;
+    }
+    .img-sanjose{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .img-aquicuana{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        padding: 10px;
+    }
+    
+    .img-pisatahua{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        padding: 10px;
+    }
+    
+    h2{
+        padding: 10px 20px;
+        color: rgb(255, 163, 51)
+    }
+    .texto-1{
+        padding: 5px 20px;
+        font-size: 12px;
+        text-align: center;
+        color: rgb(192, 192, 192);
+        text-align: justify;
+    }
+    
+    .enlaces{
+        padding: 5px 20px;
+        text-decoration: none;
+        color: rgb(24, 24, 24);
+        background: rgb(255, 163, 51);
+        border-radius: 5px;
+        margin-left: 20px;
+        display: flex;
+        width: 70%;
+    }
+    
+    .enlaces:hover{
+        background: rgb(250, 180, 95);
+        transform: scale(.98);
+    }
+
+    /* estilos de tumichucua */
+
+.foto-tumi-2{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+
+.foto-tumi-3{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+    
+}

@@ -1,0 +1,56 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    background: rgb(37, 37, 37); 
+}
+
+/* colores principales
+ naranja= rgb(255, 163, 51)
+ color texto= rgb(204, 204, 204) */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+     max-width: 1270px;
+     margin:auto;
+     align-items: center;
+}
+
+h1{
+    color: rgb(255, 163, 51);
+}
+
+a{
+    color: rgb(255, 163, 51);
+    text-decoration: none;
+    font-size: 40px;
+    padding: 0 15px;
+    margin:5px;
+    border-radius: 10px;
+}
+
+a:hover{
+    background: rgb(197, 38, 38);
+    color: beige;
+}
+
+main{
+    display: flex;
+}
+ img{
+     width: 100%;
+     max-width: 1270px;
+     margin:auto;   
+ }
+/* pantalla responsive */
+@media screen and (max-width: 1000px){
+    h1{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+}

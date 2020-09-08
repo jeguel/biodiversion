@@ -1,0 +1,136 @@
+/* grid de CITY NATURE CHALLENGE*/
+.city_nature_challenge{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "txtCity_nature txtCity_nature txtCity_nature txtCity_nature"
+                         "banner_cityNCH banner_cityNCH banner_cityNCH banner_cityNCH"
+                         "foto2_city_NCH foto2_city_NCH foto3_city_NCH  foto3_city_NCH"
+                         "txt2_cityNCH   txt2_cityNCH   txt2_cityNCH  txt2_cityNCH"
+                         "informacion     informacion   informacion   informacion";
+    grid-gap: 3px;
+}
+
+.city_nature_challenge .txtCity_nature{
+   grid-area: txtCity_nature;
+}
+
+.city_nature_challenge .banner_cityNCH{
+    grid-area: banner_cityNCH;
+}
+
+.banner_cityNCH img{
+    width: 100%;
+    max-width: 1270px;
+}
+
+
+.city_nature_challenge .foto2_city_NCH{
+    grid-area: foto2_city_NCH;
+}
+.foto2_city_NCH img{
+    width: 100%;
+    max-width: 1270px;
+}
+
+
+.city_nature_challenge .foto3_city_NCH{
+    grid-area: foto3_city_NCH;
+}
+.foto3_city_NCH img{
+    width: 100%;
+    max-width: 1270px;
+}
+
+
+
+.city_nature_challenge .txt2_cityNCH{
+    grid-area: txt2_cityNCH;
+}
+
+.city_nature_challenge .informacion{
+    grid-area: informacion;
+}
+
+/* menu informacion */
+.menu_info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.menu_informacion{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlace_nat1{
+    margin:5px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(47, 47, 47);
+    background: rgb(255, 164, 45);
+    text-align: center;
+    border-radius: 5px;
+    width: 55%;
+}
+.enlace_nat1:hover{
+    background: rgb(255, 188, 99);
+}
+
+.logo-naturalist{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.logo-naturalist:hover{
+    transform: scale(.97);
+}
+
+/* pantalla responsive */
+@media screen and (max-width: 1000px){
+
+/* menu informacion */    
+    .menu_info{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .menu_informacion{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .enlace_nat1{
+        margin:5px;
+        padding: 5px;
+        text-decoration: none;
+        color: rgb(47, 47, 47);
+        background: rgb(255, 164, 45);
+        text-align: center;
+        border-radius: 5px;
+        width: 90%;
+    }
+    .enlace_nat1:hover{
+        background: rgb(255, 188, 99);
+    }
+    
+    .logo-naturalist{
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+    }
+    
+    .logo-naturalist:hover{
+        background: rgb(85, 85, 85);
+    }
+
+}

@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    background: rgb(37, 37, 37);
+}
+
+header{
+   
+    width: 100%;
+    height: 110px;
+}
+
+.container-header{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    margin: auto;
+    background: rgb(255, 163, 51);
+    max-width: 1270px;
+}
+
+.container-logo-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-left: 10px;
+}
+
+.container-logo-title img{
+    width: 120px;
+    height: 80px;
+}
+
+.container-logo-title .logo-direccion{
+    width: 90px;
+    height: 80px;
+}
+
+.container-logo-title h1{
+    font-size: 40px;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+/* estilos del menu */
+
+.menu{
+    display: flex;
+    justify-content: center;
+     margin: auto;
+     z-index: 100px;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu ul li{
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 163, 51);
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-top: 3px solid transparent;
+  transition: border 300ms;
+  position: relative;
+}
+
+.menu > ul > li:hover{
+    border: 1px solid rgb(168, 168, 168);
+    border-top: 3px solid rgb(255, 163, 51);
+    cursor: pointer;
+}
+ 
+.menu ul li span{
+    font-size: 10px;
+}
+
+/* estilos submenu */
+
+.menu ul li ul {
+    width: 250px;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    flex-direction: column;
+    border: 1px solid rgb(136, 136, 136);
+    background: rgb(39, 39, 39);
+    border-bottom: 2px solid rgb(255, 163, 51);
+    padding: 10px;
+}
+
+.menu ul li ul li {
+    border-bottom: 1px solid rgb(255, 163, 51); 
+    font-weight: 100;
+ 
+    padding: 5px;
+    background: rgb(92, 92, 92);
+    text-decoration: none;
+    color: rgb(233, 233, 233);
+    font-size: 14px;
+}
+
+
+
+.menu ul li ul :hover{
+    background: rgb(122, 122, 122);
+    color: #fff;
+}
+
+.icon-menu{
+    display: none;
+}
+ul li ul li a{
+    display: flex;
+    text-decoration: none;
+    color: rgb(204, 204, 204);
+    padding: 5px;
+}
+
+.contacto{
+    color: rgb(255, 163, 51);
+    text-decoration: none;
+}
+
+
+/* estilos del main */
+main{
+    width: 100%;
+    height: auto;
+    max-width: 1270px;
+    margin: auto;
+}
+
+article{ 
+    color: rgb(161, 161, 161); 
+}
+
+
+article p{
+    font-size: 14px;
+    padding: 40px 20px;
+    text-align: justify;
+}
+
+.img-portada{
+    width: 100%;
+    height: auto;
+    max-width: 1270px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+
+/* estilos del footer */
+footer{
+    width: 100%;
+    height: 40PX;
+    max-width: 1270px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(255, 164, 45);
+    background: rgb(156, 156, 156);
+    align-items: center;
+    margin: auto;
+}
+
+.contacto-inferior{
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* pantalla responsive */
+@media screen and (max-width: 1000px){
+  
+    header{
+        height: 25px;
+        
+    }
+
+    .container-logo-title{
+        height: 60px;
+    }
+    .container-logo-title img{
+        width: 60px;
+        height: 40px;
+    }
+
+    .container-logo-title .logo-direccion{
+        width: 50px;
+        height: 40px;
+    }
+   .container-logo-title h1{
+       font-size: 25px;
+       margin-top: 6px;
+     
+   }
+
+    .icon-menu{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 70px;
+        font-size: 30px;
+        color: antiquewhite;
+        cursor: pointer;
+    }
+
+    body{
+        
+        transition: all 300ms;
+    }
+
+    .body2{
+        transform: translateX(-300px);
+    }
+
+    .menu{
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        background: rgb(0, 0, 0);
+        margin-top: 0px;
+        overflow-y: scroll;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        
+    }
+
+    .menu ul li{
+        padding: 10px 20px;
+        background: rgb(24, 24, 24);
+        font-size: 20px;
+        color: rgb(255, 153, 0);
+    }
+
+    .menu ul li ul{
+        top: 0;
+        border-bottom: 1px solid transparent;
+        
+    }
+
+    .menu ul li:hover{
+        border: 1px solid transparent;
+        border-top: 3px solid transparent;
+        background: rgb(0, 0, 0);
+    }
+
+    .menu ul li ul
+    {
+       width: 100%;
+        position: relative;
+        background: rgb(120, 121, 121);
+        padding: 2px;
+    }
+
+    .menu ul li ul li{
+        font-size: 18px;
+        color: antiquewhite;
+    }
+
+    .menu ul li ul li:hover{
+        background: rgb(105, 105, 105);
+    }
+
+    article{
+        text-align: center;
+    }
+    article p{
+        font-size: 14px;
+        padding: 20px 20px;
+        text-align: justify;
+    }
+
+/* estilos del footer */
+
+}
+
+@media screen and (max-width: 720px){
+    .container-logo-title h1{
+        font-size: 20px;
+        margin-top: 6px;
+    }
+}

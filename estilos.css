@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+background: rgb(0, 0, 0);
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-fotos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+    margin-left: 0;
+    margin-top: -70px;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 136, 0);
+
+    }
+
+    .titulo-fotos img{
+        height: 50px;
+        width: 40px;
+    }
+    
+    .titulo-fotos img:hover {
+        transform: scale(.80);
+    }
+    
+/* desde aqui ventana modal */
+
+#imagenes-modal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70px;
+    background-color: rgb(0, 0, 0);
+}
+.modal-reposo{
+  
+    margin: 10px;
+    padding: 0;
+    width: 15%;
+    height: auto;
+    overflow: hidden;
+    transition: all 0.1s;
+    float: left;
+    border-radius: 5px;
+}
+
+figure{
+    margin:0;
+    position: relative;
+    overflow: hidden;
+}
+
+figcaption{
+    transition: all 0.3s;
+    position: absolute;
+    left: 0px;
+    bottom: -110px;
+    background: rgba(255, 174, 44, 0.596);
+    width: 100%;
+    height: auto;
+    padding: 3%;
+}
+
+figure:hover figcaption{
+    bottom: 0px;
+}
+
+.titulo_foto{
+    font-size: 14px;
+}
+
+
+
+
+.modal-activo{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index:900;
+    display: flex;
+    padding: 10px 2%;
+    width:100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    border-radius:0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+   
+}
+
+.modal-reposo:hover{
+    border-radius: 10%;
+    border: 1px solid rgb(255, 136, 0);
+    cursor: pointer;
+    
+}
+
+.info-modal-reposo .foto_epecie{
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/* 
+.info-modal-reposo h1{
+    display: none;
+}
+.info-modal-reposo .alin-dcha{
+    display: none;
+} */
+
+.info-modal-reposo .cabecera_modal{
+    display: none;
+}
+.info-modal-reposo .txt-descripcion{
+    display: none;
+}
+
+.info-modal-reposo .btn_naturalista{
+    display: none;
+}
+
+.info-modal-reposo .descripcion{
+    display: none;
+}
+
+.info-modal-reposo .estado_conservacio_PM{
+    display: none;
+}
+
+.info-modal-reposo .estado_conservacion_NE{
+    display: none;
+}
+
+.info-modal-activo figcaption{
+    display: none;
+}
+
+.info-modal-activo {
+    margin: 10% 30%;
+    padding: 5px 10px;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 136, 0);
+}
+
+
+.cabecera_modal{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.info-modal-activo .foto_epecie{
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    border-radius: 5px;
+    height: auto;
+    display: flex;
+}
+
+.txt-descripcion {
+    margin-top: 5px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 13px;
+    line-height: 18px;
+
+}
+
+.descripcion {
+    color: rgb(170, 170, 170);
+    width: 100%;
+}
+
+
+.estado_conservacion_PM{
+    background: rgb(0, 100, 58);
+    color: rgb(233, 233, 233);
+    padding: 2px 5px;
+    width: 50px;
+    border-radius: 3px;
+    font-size: 17px;
+    text-align: center;
+    margin: 10px;
+}
+
+.estado_conservacion_NE{
+    background: rgb(219, 219, 219);
+    color: rgb(20, 20, 20);
+    padding: 2px 5px;
+    width: 50px;
+    border-radius: 3px;
+    font-size: 17px;
+    text-align: center;
+    margin: 10px;
+}
+
+.estado_conservacion_VU{
+    background: rgb(255, 217, 0);
+    color: rgb(20, 20, 20);
+    padding: 2px 5px;
+    width: 50px;
+    border-radius: 3px;
+    font-size: 17px;
+    text-align: center;
+    margin: 10px;
+}
+
+.estado_conservacion_EN{
+    background: rgb(255, 0, 0);
+    color: rgb(20, 20, 20);
+    padding: 2px 5px;
+    width: 50px;
+    border-radius: 3px;
+    font-size: 17px;
+    text-align: center;
+    margin: 10px;
+}
+.estado_conservacion_CA{
+    background: rgb(0, 102, 9);
+    color: rgb(20, 20, 20);
+    padding: 2px 5px;
+    width: 50px;
+    border-radius: 3px;
+    font-size: 17px;
+    text-align: center;
+    margin: 10px;
+}
+.seccion_descripcion{
+    width: 100%;
+}
+
+.seccion_referencias{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin: auto;
+    justify-content: center;
+}
+
+.btn_naturalista{
+    width: 50%;
+}
+
+.logo_naturalista{
+    width: 100%; 
+    border-radius: 5px;
+}
+
+.logo_naturalista:hover{
+    transform: scale(.95);
+}
+
+.logo_creative_com{
+    width: 60%;
+}
+
+.logo_creative_com img{
+    width: 100%;
+}
+.fotografo {
+    font-size: 10px;
+    color: #eee;
+}
+
+
+.info-modal-activo h1{
+    color: rgb(255, 136, 0);
+}
+
+.info-modal-activo p.alin-dcha{
+    float: right;
+    padding-bottom: 0px;
+    cursor: pointer;
+    color: rgb(155, 155, 155);
+}
+
+.info-modal-activo p.alin-dcha span{
+    font-size: 1.5em;
+    color: rgb(155, 155, 155);
+    margin: 0;
+    padding: 0 10px 0px 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.info-modal-activo p.alin-dcha span:hover{
+    background-color: #a00;
+    color: #eee;
+}
+
+
+@media all and (max-width: 1000px) {
+   
+    .titulo-fotos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        position: fixed;
+        margin-left: 0;
+        margin-top: -60px;
+        height: 60px;
+        width: 100%;
+        background-color: rgb(255, 136, 0);
+    
+        }
+    
+    
+    .titulo-fotos img{
+        height: 50px;
+        width: 40px;
+    }
+    
+    .titulo-fotos img:hover {
+        transform: scale(.80);
+    }
+    
+    figcaption{
+        transition: all 0.3s;
+        position: absolute;
+        left: 0px;
+        bottom: -135px;
+        background: rgba(255, 174, 44, 0.596);
+        width: 100%;
+        height: auto;
+        padding: 3%;
+    }
+
+    #imagenes-modal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+        background-color: rgb(8, 8, 8);
+    }
+    
+    .info-modal-activo {
+        margin: 10% 20%;
+        padding: 5px 10px;
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(255, 136, 0);
+    }
+
+    .info-modal-activo .foto_epecie{
+        margin: auto;
+        padding: 0;
+        width: 80%;
+        border-radius: 5px;
+        height: auto;
+        display: flex;
+    }
+
+
+/* seccion referencias */
+.txt-descripcion{
+    display: flex;
+    width: 100%;
+}
+
+.seccion_descripcion{
+    width: 100%;
+}
+    .seccion_referencias{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin: auto;
+    }
+    
+    .btn_naturalista{
+        width: 50%;
+    }
+    
+    .logo_naturalista{
+        width: 100%; 
+        border-radius: 5px;
+    }
+    
+    .logo_naturalista:hover{
+        transform: scale(.95);
+    }
+    
+.logo_creative_com{
+    width: 60%;
+}
+
+.logo_creative_com img{
+    width: 100%;
+}
+.fotografo {
+    font-size: 10px;
+    color: #eee;
+}
+
+}
+
+@media all and (max-width: 576px) {
+    
+.titulo-fotos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+    margin-left: 0;
+    margin-top: -65px;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 136, 0);
+    font-size: 10px;
+    text-align: center;
+    }
+
+.titulo-fotos img{
+    height: 50px;
+    width: 30px;
+}
+
+.titulo-fotos img:hover {
+    transform: scale(.80);
+}
+
+    #imagenes-modal{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 55px;
+        
+        background-color: rgb(8, 8, 8);
+    }
+    .modal-reposo{
+  
+        margin: 7px;
+        padding: 0;
+        width: 28%;
+        height: auto;
+        overflow: hidden;
+        transition: all 0.1s;
+        float: left;
+    }
+    .info-modal-activo img{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 5px;
+        height: auto;
+    }
+
+    .info-modal-activo {
+        margin: 0 auto;
+        padding: 2%;
+        width: 95%;
+        height: auto;
+        border-radius: 10px;
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(255, 136, 0);
+    }
+    
+    
+    .info-modal-activo h1{
+        color: rgb(255, 136, 0);
+        font-size: 17px;
+    }
+
+/* seccion referencias */
+.txt-descripcion{
+    display: flex;
+    width: 100%;
+}
+
+.seccion_descripcion{
+    width: 100%;
+}
+
+    .seccion_referencias{
+        display: flex;
+        flex-wrap: wrap;
+        width: 30%;
+        margin: auto;
+        justify-content: center;
+    }
+    
+    .btn_naturalista{
+        width: 50%;
+    }
+    
+    .logo_naturalista{
+        width: 100%; 
+        border-radius: 5px;
+    }
+    .logo_naturalista:hover{
+        transform: scale(.95);
+    }
+  .logo_creative_com{
+        width: 70%;
+    }
+    .fotografo {
+        font-size: 10px;
+        color: #eee;
+    }
+
+
+
+}

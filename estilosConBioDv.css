@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+font-family: Arial, Helvetica, sans-serif;
+}
+
+    
+/* desde aqui ventana modal */
+
+#imagenes-modal{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgb(8, 8, 8);
+}
+.modal-reposo{
+  
+    margin: 10px;
+    padding: 0;
+    width: 15%;
+    height: auto;
+    overflow: hidden;
+    transition: all 0.1s;
+    float: left;
+    border-radius: 5px;
+}
+
+.modal-activo{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index:2000;
+    display: flex;
+    padding: 30px 5%;
+    width:100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    border-radius:0;
+    background-color: rgba(0, 0, 0, 0.5);
+   
+}
+
+.modal-reposo:hover{
+    border: 1px solid rgb(255, 136, 0);
+    cursor: pointer;
+    transform: scale(.95);
+    
+}
+
+.info-modal-reposo img{
+    display: block;
+    max-width: 100%;
+
+}
+
+.info-modal-reposo h1, .info-modal-reposo p{
+    display: none;
+}
+
+.texto1{
+    padding: 10px 0px;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(192, 192, 192);
+}
+
+.info-modal-activo .texto1{
+    display: none;
+} 
+
+.info-modal-reposo .seccion-enlace{
+    display: none;
+}
+.info-modal-reposo .seccion-enlace1{
+    display: none;
+}
+.info-modal-reposo .btn_birds{
+    display: none;
+}
+
+
+.seccion-enlace{
+    margin-top: 10px;
+}
+
+.enlace{
+    padding-top: 10px;
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 136, 0);
+}
+
+.enlace:hover{
+    
+    color: rgb(255, 195, 128);
+}
+.info-modal-activo .btn_birds img{
+    width: 100px;
+    height: 60px;
+    margin:5px;
+    float: right;
+    
+}
+
+.seccion-enlace1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.seccion-enlace1 .btn_enlace_birds img{
+    width: 90px;
+    height: 50px;
+    margin:5px;
+}
+
+.btn_enlace_birds:hover{
+    transform: scale(.95);
+}
+.btn_birds img:hover{
+    transform: scale(.95);
+}
+
+.info-modal-activo {
+    
+    margin: 0 auto;
+    padding: 20px;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 136, 0);
+  
+}
+
+.txt-descripcion{
+    margin-top: 10px;
+    padding: 0px;
+    color: rgb(170, 170, 170);
+}
+
+
+
+
+.info-modal-activo h1{
+    color: rgb(255, 136, 0);
+    font-size: 30px;
+}
+
+.info-modal-activo p.alin-dcha{
+    float: right;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: rgb(155, 155, 155);
+}
+
+.info-modal-activo p.alin-dcha span{
+    font-size: 2em;
+    color: rgb(155, 155, 155);
+    margin: 0;
+    padding: 0 10px 2.5px 10px;
+    width: 15px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.info-modal-activo p.alin-dcha span:hover{
+    background-color: #a00;
+    color: #eee;
+}
+
+.info-modal-activo img{
+    display: flex;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    border-radius: 3%;
+    height: auto;
+}
+
+
+@media all and (max-width: 1000px) {
+   
+
+    #imagenes-modal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5px;
+        background-color: rgb(8, 8, 8);
+    }
+    .info-modal-activo img{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 3%;
+        height: auto;
+    }
+
+
+}
+
+@media all and (max-width: 720px) {
+
+
+.titulo-fotos img:hover {
+    transform: scale(.80);
+}
+
+    #imagenes-modal{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5px;
+        background-color: rgb(8, 8, 8);
+    }
+    .modal-reposo{
+  
+        margin: 7px;
+        padding: 0;
+        width: 28%;
+        height: auto;
+        overflow: hidden;
+        transition: all 0.1s;
+        float: left;
+    }
+    .info-modal-activo img{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 3%;
+        height: auto;
+    }
+
+    .info-modal-activo {
+        
+        margin: 0 auto;
+        padding: 10px;
+        width: 95%;
+        height: auto;
+        border-radius: 10px;
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(255, 136, 0);
+      
+    }
+    .info-modal-activo h1{
+        color: rgb(255, 136, 0);
+        text-align: left;
+        font-size: 25px;
+    }
+    
+}
